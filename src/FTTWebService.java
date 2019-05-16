@@ -2,10 +2,11 @@ import static spark.Spark.*;
  
 public class FTTWebService {
 	
-	//Microserviços
+	//Microserviços - GitHub: danielscarvalho/FTT-API-Microservice-SparkJava
 	
 	//Refer: https://www.baeldung.com/spark-framework-rest-api
-	//Refer: http://sparkjava.com/ 
+	//Refer: http://sparkjava.com/
+	//Refer: https://www.devmedia.com.br/como-usar-funcoes-lambda-em-java/32826
 	
     public static void main(String[] args) {
     	
