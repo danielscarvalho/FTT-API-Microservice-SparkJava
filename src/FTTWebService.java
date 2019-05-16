@@ -24,6 +24,16 @@ public class FTTWebService {
             	   Integer.valueOf(req.params(":b"));
         });
 
+        //curl -X PUT http://localhost:4567/user/344
+
+        put("/user/:id", (req,res)-> {
+            return "New user, " + req.params(":id");
+        });
+
+        post("/user/:id", (req,res)-> {
+            return "User, " + req.params(":id") + " updated!!!";
+        });
+
         //curl -X DELETE http://localhost:4567/user/344
         
         delete("/user/:id", (req,res)-> {
