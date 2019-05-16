@@ -11,10 +11,9 @@ public class FTTWebService {
     public static void main(String[] args) {
     	
     	System.out.print(new java.util.Date());
-    	System.out.println(" - FTT WEB Service...");
-    	
+    	System.out.println(" - FTT WEB Service...");    	
   
-        get("/hello", (req, res)->"Hello, world " + new java.util.Date());
+        get("/hello", (req, res)-> "Hello, world " + new java.util.Date());
          
         get("/hello/:name", (req,res)-> {
             return "Hello, " + req.params(":name");
@@ -25,6 +24,13 @@ public class FTTWebService {
             	   Integer.valueOf(req.params(":b"));
         });
 
+        //curl -X DELETE http://localhost:4567/user/344
+        
+        delete("/user/:id", (req,res)-> {
+            return "User, " + req.params(":id") + " removed!!";
+        });
+
+        
     
     }
 }
